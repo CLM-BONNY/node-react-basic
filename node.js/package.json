@@ -6,7 +6,7 @@
     "start": "node index.js",
     "backend": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npm run backend:dev\" \"cd ../react.js && npm run start\""
+    "dev": "concurrently \"npm run backend\" \"cd ../react.js && npm run start\""
   },
   "author": "minseon",
   "license": "ISC",
