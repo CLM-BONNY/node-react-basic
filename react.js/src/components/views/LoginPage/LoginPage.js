@@ -43,12 +43,15 @@ function LoginPage(props) {
         }}>
             <form style={{ display: 'flex', flexDirection: 'column' }}
                 onSubmit={onSubmitHandler}>
+                
                 <label>Email</label>
-                <input type="email" value={ Email } onChange={onEmailHandler} />
+                <input type="email" value={Email} onChange={onEmailHandler} />
+                
                 <label>Password</label>
                 <input type="password" value={Password} onChange={onPasswordHandler} />
                 <br />
-                <button>
+                
+                <button type="submit">
                     Login
                 </button>
             </form>
