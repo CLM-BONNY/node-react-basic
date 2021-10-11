@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { registerUser } from '../../../_actions/user_action'
+import { withRouter } from 'react-router-dom'
 
 function RegisterPage(props) {
     const dispatch = useDispatch()
@@ -9,7 +10,6 @@ function RegisterPage(props) {
     const [Name, setName] = useState("")
     const [Password, setPassword] = useState("")
     const [ConfirmPassword, setConfirmPassword] = useState("")
-
 
     const onEmailHandler = (event) => {
         setEmail(event.currentTarget.value)
@@ -42,7 +42,6 @@ function RegisterPage(props) {
                     props.history.push("/login")
                 } else {
                     alert("Failed to signup")
-                    console.error()
                 }
             })
     }
@@ -68,12 +67,10 @@ function RegisterPage(props) {
                 <input type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler} />
                 <br />
                 
-                <button type="submit">
-                    Register
-                </button>
+                <button type="submit">Register</button>
             </form>
         </div>
     )
 }
 
-export default RegisterPage
+export default withRouter(RegisterPage)
